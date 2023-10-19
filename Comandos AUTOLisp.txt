@@ -1,0 +1,41 @@
+Comandos AUTOLisp
+
+--> Inserir Placas:                                    "S__" (Número da placa)
+
+--> Inserir 30 LED com rotação a ser escolhida:        "le"
+
+--> Inserir 30 LED na vertical:                        "lv"
+
+--> Inserir 30 LED na horizontal:                      "lh"
+
+--> Inserir Bloco de LED com rotação a ser escolhida:  "bl"
+
+--> Inserir Bloco de LED com a frente para a cima:     "blc"
+
+--> Inserir Bloco de LED com a frente para a cima:     "blb"
+
+--> Inserir Bloco de LED com a frente para a cima:     "ble"
+
+--> Inserir Bloco de LED com a frente para a cima:     "bld"
+
+--> Inserir extintor ABC com placa E5:                 "abc"
+
+--> Inserir bloco para placas áereas:                  "ar"
+
+--> Inserir Portas com tamanho a ser escolhido:        "po"
+
+--> Inserir hidrante:                                  "hid"
+
+--> Inserir seta da escada                             "seta"
+
+--> Inserir exemplo hatch área fria                    "haex"
+
+--> Inserir exemplo hatch implantação                  "haeximp"
+
+--> Inserir bloco de Acesso (Planta de Risco)          "blac"
+
+--> Inserir bloco de Hidrante (Planta de Risco)        "blh"
+
+--> Inserir bloco de Escada (Planta de Risco)          "bles"
+
+--> Inserir bloco de Reserva de Incêndio (P de R)      "blres"
