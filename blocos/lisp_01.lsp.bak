@@ -1546,7 +1546,7 @@
     )
   )
   (setvar "cecolor" "bylayer")
-  (command "_-insert"	     "c:/autolisp/blocos/Bloco_S8"
+  (command "-insert"	     "c:/autolisp/blocos/Bloco_S8"
 	   "_s"		     SCALE	       "_non"
 	   p1		     "0"
 	  )

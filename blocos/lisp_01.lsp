@@ -2,7 +2,7 @@
 
 
 (defun c:k ()
-  (load "c:/autolisp/lisp_01.lsp")
+  (load "c:/autolisp/blocos/lisp_01.lsp")
   (princ)
 )
 
@@ -14,7 +14,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do circulo verde: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do circulo verde: ")
   )
   (setvar "cecolor" "bylayer")
   (command "-insert"	     "c:/autolisp/blocos/Local_detec"
@@ -29,7 +29,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do circulo rosa: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do circulo rosa: ")
   )
   (setvar "cecolor" "bylayer")
   (command "-insert"	     "c:/autolisp/blocos/Local_alarme"
@@ -40,12 +40,12 @@
 )
 
 
-;MUDANÇA DE CORES
+;MUDANï¿½A DE CORES
 
 
 (defun c:blue ()
-  (command "select" "auto" pause)
-  (command "chprop" "p" "" "c" "5" "")
+  (command "_select" "auto" pause)
+  (command "_chprop" "_p" "" "_c" "5" "")
 )
 
 (defun c:green()
@@ -131,11 +131,11 @@
   )
 
 (defun c:turnoffluz()
-(command "-layer" "OFF" "Raio Iluminação" "")
+(command "-layer" "OFF" "Raio Iluminaï¿½ï¿½o" "")
   )
 
 (defun c:turnonluz()
-(command "-layer" "ON" "Raio Iluminação" "")
+(command "-layer" "ON" "Raio Iluminaï¿½ï¿½o" "")
   )
 
 (defun c:turnoffext()
@@ -165,11 +165,11 @@
   )
 
 (defun c:lockluz()
-(command "-layer" "LO" "Raio Iluminação" "")
+(command "-layer" "LO" "Raio Iluminaï¿½ï¿½o" "")
   )
 
 (defun c:unlockluz()
-(command "-layer" "U" "Raio Iluminação" "")
+(command "-layer" "U" "Raio Iluminaï¿½ï¿½o" "")
   )
 
 (defun c:lockext()
@@ -188,7 +188,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da luva: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da luva: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -212,7 +212,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da reduçãoa: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da reduï¿½ï¿½oa: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -235,7 +235,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do acoplamento: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do acoplamento: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -260,7 +260,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do registro gaveta: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do registro gaveta: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -284,7 +284,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do registro gaveta (superior): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do registro gaveta (superior): ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -310,7 +310,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do te: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do te: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -330,13 +330,13 @@
 
 
 
- ;Insert Válvula de retenção (Visão lateral)
+ ;Insert Vï¿½lvula de retenï¿½ï¿½o (Visï¿½o lateral)
 
 (defun c:vrl (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da válvula de retenção (visão lateral): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da vï¿½lvula de retenï¿½ï¿½o (visï¿½o lateral): ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -362,7 +362,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da válvula do joelho: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da vï¿½lvula do joelho: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -388,7 +388,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da curva macho fêmea: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da curva macho fï¿½mea: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -408,13 +408,13 @@
 
 
 
- ;Insert Válvula
+ ;Insert Vï¿½lvula
 
 (defun c:valvula (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da válvula: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da vï¿½lvula: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -440,7 +440,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da cap: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da cap: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -467,7 +467,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da união: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da uniï¿½o: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -494,7 +494,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do joelho: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do joelho: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -521,7 +521,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da niple: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da niple: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -540,13 +540,13 @@
 
 
 
- ;Insert Niple de redução
+ ;Insert Niple de reduï¿½ï¿½o
 
 (defun c:niple_reducao (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do niple de redução: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do niple de reduï¿½ï¿½o: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -571,7 +571,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do manômetro: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do manï¿½metro: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -597,7 +597,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do joelho: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do joelho: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -622,7 +622,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do joelho: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do joelho: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -649,7 +649,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do joelho com vista superior com acoplamento: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do joelho com vista superior com acoplamento: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -668,13 +668,13 @@
 
 
 
- ;Insert Bucha Redução
+ ;Insert Bucha Reduï¿½ï¿½o
 
 (defun c:bucha (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da bucha de redução: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da bucha de reduï¿½ï¿½o: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -700,7 +700,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do manometro: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do manometro: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -726,7 +726,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do pressostato: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do pressostato: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -751,7 +751,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do André: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do Andrï¿½: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -769,13 +769,13 @@
 )
 
 
-;Insert Válvula de retencao (visao superior)
+;Insert Vï¿½lvula de retencao (visao superior)
 
 (defun c:vrs (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da válvula de retenção (visão superior): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da vï¿½lvula de retenï¿½ï¿½o (visï¿½o superior): ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -803,7 +803,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do registro (visão superior): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do registro (visï¿½o superior): ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -831,7 +831,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do balão de pressão: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do balï¿½o de pressï¿½o: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -856,7 +856,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do joelho (visão frontal): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do joelho (visï¿½o frontal): ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -881,7 +881,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da flange: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da flange: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -906,7 +906,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do registro angular: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do registro angular: ")
   )
   (if (tblsearch "layer" "conexoes")
     (setvar "clayer" "conexoes")
@@ -955,13 +955,13 @@
    (if (tblsearch "layer" "Contorno")
     (progn
     (setvar "clayer" "Contorno")
-    (command "-layer" "_C" "3" "" "")
+    (command "_-layer" "_C" "3" "" "")
     (princ)
     )
     (progn
-      (command "-layer" "_M" "Contorno" "_c" "1" "" "")
+      (command "_-layer" "_M" "Contorno" "_c" "1" "" "")
       (setvar "clayer" "Contorno")
-      (command "-layer" "_C" "3" "" "")
+      (command "_-layer" "_C" "3" "" "")
       (princ)
     )
   )
@@ -973,7 +973,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (E5): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (E5): ")
   )
   (if (tblsearch "layer" "E5")
     (setvar "clayer" "E5")
@@ -995,7 +995,7 @@
 (guarda_info)
 (setvar "osmode" 0)
 (setq
-  p1 (getpoint "\nEntre com o ponto de inserção da cota de nível: ")
+  p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da cota de nï¿½vel: ")
 )
 (if (tblsearch "layer" "nivel")
   (setvar "clayer" "nivel")
@@ -1018,7 +1018,7 @@
 (defun c:raio (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
-  (setq p1(getpoint "\Entre com o ponto de inserção do raio: "))
+  (setq p1(getpoint "\Entre com o ponto de inserï¿½ï¿½o do raio: "))
   (if (tblsearch "layer" "Raio Placas")
     (setvar "clayer" "Raio Placas")
     (progn
@@ -1030,6 +1030,49 @@
   (devolve_info)
  )
 
+    ;Inserir Shape A2
+
+(defun c:a2 (/ p1)
+  (guarda_info)
+  (setvar "osmode" 0)
+  (setq p1(getpoint "\Pick a insert point: "))
+   (command "-insert"		 "c:/autolisp/blocos/shapeA2"
+	   "_s" 			 SCALE
+	   "_non"		 p1
+	   "0"
+	  )
+  (devolve_info)
+ )
+
+    ;Inserir Shape A0
+
+(defun c:a0 (/ p1)
+  (guarda_info)
+  (setvar "osmode" 0)
+  (setq p1(getpoint "\Pick a insert point: "))
+   (command "-insert"		 "c:/autolisp/blocos/shapeA0"
+	   "_s" 			 SCALE
+	   "_non"		 p1
+	   "0"
+	  )
+  (devolve_info)
+ )
+
+
+    ;Inserir Shape A1
+
+(defun c:a1 (/ p1)
+  (guarda_info)
+  (setvar "osmode" 0)
+  (setq p1(getpoint "\Pick a insert point: "))
+   (command "-insert"		 "c:/autolisp/blocos/shapeA1"
+	   "_s" 			 SCALE
+	   "_non"		 p1
+	   "0"
+	  )
+  (devolve_info)
+ )
+
 
   ;Insert Bloco Central do Alarme
 
@@ -1037,7 +1080,7 @@
   (guarda_info)
   (setvar "osmode" 512)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da Central: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da Central: ")
   )
   (if (tblsearch "layer" "S1")
     (setvar "clayer" "S1")
@@ -1061,7 +1104,7 @@
   (setvar "osmode" 0)
   (setq
     p1 (getpoint
-	 "\nEntre com o ponto de inserção da placa (S2 948x474): "
+	 "\nEntre com o ponto de inserï¿½ï¿½o da placa (S2 948x474): "
        )
   )
   (if (tblsearch "layer" "S2GG")
@@ -1099,7 +1142,7 @@
   (setvar "osmode" 0)
   (setq
     p1 (getpoint
-	 "\nEntre com o ponto de inserção da placa (S1 948x474): "
+	 "\nEntre com o ponto de inserï¿½ï¿½o da placa (S1 948x474): "
        )
   )
   (if (tblsearch "layer" "S1GG")
@@ -1135,7 +1178,7 @@
   (setvar "osmode" 0)
   (setq
     p1 (getpoint
-	 "\nEntre com o ponto de inserção da placa (S12 948x474): "
+	 "\nEntre com o ponto de inserï¿½ï¿½o da placa (S12 948x474): "
        )
   )
   (if (tblsearch "layer" "S12GG")
@@ -1175,7 +1218,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S3 948x474): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S3 948x474): ")
   )
   (if (tblsearch "layer" "S3GG")
     (setvar "clayer" "S3GG")
@@ -1211,7 +1254,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S12 200x400): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S12 200x400): ")
   )
   (if (tblsearch "layer" "S12G")
     (setvar "clayer" "S12G")
@@ -1242,7 +1285,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S1 200x400): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S1 200x400): ")
   )
   (if (tblsearch "layer" "S1G")
     (setvar "clayer" "S1G")
@@ -1275,7 +1318,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S2 200x400): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S2 200x400): ")
   )
   (if (tblsearch "layer" "S2G")
     (setvar "clayer" "S2G")
@@ -1309,7 +1352,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S3 200x400): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S3 200x400): ")
   )
   (if (tblsearch "layer" "S3G")
     (setvar "clayer" "S3G")
@@ -1345,7 +1388,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S8 200x400): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S8 200x400): ")
   )
   (if (tblsearch "layer" "S8G")
     (setvar "clayer" "S8G")
@@ -1378,7 +1421,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S9 200x400): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S9 200x400): ")
   )
   (if (tblsearch "layer" "S9G")
     (setvar "clayer" "S9G")
@@ -1410,7 +1453,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S1): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S1): ")
   )
   (if (tblsearch "layer" "S1")
     (setvar "clayer" "S1")
@@ -1443,7 +1486,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S2): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S2): ")
   )
   (if (tblsearch "layer" "S2")
     (setvar "clayer" "S2")
@@ -1465,7 +1508,7 @@
   (devolve_info)
 )
 
-                   ;IMPOSTO É ROUBO
+                   ;IMPOSTO ï¿½ ROUBO
 
 
 					;Insert Bloco Alarme
@@ -1474,7 +1517,7 @@
   (guarda_info)
   (setvar "osmode" 512)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção do Alarme: ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do Alarme: ")
   )
   (if (tblsearch "layer" "Bloco_hidrante")
     (setvar "clayer" "Bloco_hidrante")
@@ -1505,7 +1548,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S3): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S3): ")
   )
   (if (tblsearch "layer" "S3")
     (setvar "clayer" "S3")
@@ -1536,24 +1579,24 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S8): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S8): ")
   )
   (if (tblsearch "layer" "S8")
     (setvar "clayer" "S8")
     (progn
-      (command "-layer" "_M" "S8" "_c" "1" "" "")
+      (command "_-layer" "_M" "S8" "_c" "1" "" "")
       (setvar "clayer" "S8")
     )
   )
   (setvar "cecolor" "bylayer")
-  (command "-insert"	     "c:/autolisp/blocos/Bloco_S8"
+  (command "_-insert"	     "c:/autolisp/blocos/Bloco_S8"
 	   "_s"		     SCALE	       "_non"
 	   p1		     "0"
 	  )
   (if (tblsearch "layer" "Raio Placas")
     (setvar "clayer" "Raio Placas")
     (progn
-      (command "-layer" "_M" "Raio Placas" "_c" "2" "" "")
+      (command "_-layer" "_M" "Raio Placas" "_c" "2" "" "")
       (setvar "clayer" "Raio Placas")
     )
   )
@@ -1572,7 +1615,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S9): ")
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S9): ")
   )
   (if (tblsearch "layer" "S9")
     (setvar "clayer" "S9")
@@ -1607,7 +1650,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S10): "
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S10): "
        )
   )
   (if (tblsearch "layer" "S10")
@@ -1640,7 +1683,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S11): "
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S11): "
        )
   )
   (if (tblsearch "layer" "S11")
@@ -1678,7 +1721,7 @@
   (guarda_info)
   (setvar "osmode" 0)
   (setq
-    p1 (getpoint "\nEntre com o ponto de inserção da placa (S12): "
+    p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da placa (S12): "
        )
   )
   (if (tblsearch "layer" "S12")
@@ -1711,13 +1754,13 @@
 
 
 
-					;insert Seta de Rota de Fuga - Com Rotação a ser escolhida
+					;insert Seta de Rota de Fuga - Com Rotaï¿½ï¿½o a ser escolhida
 
 (defun c:fu (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq	p1 (getpoint
-	     "\nEntre com o ponto de inserção da seta e fuga: "
+	     "\nEntre com o ponto de inserï¿½ï¿½o da seta e fuga: "
 	   )
   )
   (if (tblsearch "layer" "Fuga")
@@ -1743,13 +1786,13 @@
 
 
 
-					;insert 30 LED - Com Rotação a ser escolhida
+					;insert 30 LED - Com Rotaï¿½ï¿½o a ser escolhida
 
 (defun c:LE (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq	p1 (getpoint
-	     "\nEntre com o ponto de inserção do bloco 30-LED: "
+	     "\nEntre com o ponto de inserï¿½ï¿½o do bloco 30-LED: "
 	   )
   )
   (if (tblsearch "layer" "LED")
@@ -1764,11 +1807,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       pause
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "700")
@@ -1788,7 +1831,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco 30-LED (Horizontal): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco 30-LED (Horizontal): "
 	 )
   )
   (if (tblsearch "layer" "LED")
@@ -1803,11 +1846,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       "0"
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "700")
@@ -1828,7 +1871,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco 30-LED (Vertical): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco 30-LED (Vertical): "
 	 )
   )
   (if (tblsearch "layer" "LED")
@@ -1843,11 +1886,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       "0"
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "700")
@@ -1862,13 +1905,13 @@
 
 
 
-					;insert Bloco LED Com a Rotação a ser escolhida
+					;insert Bloco LED Com a Rotaï¿½ï¿½o a ser escolhida
 
 (defun c:Bl (/ p1)
   (guarda_info)
   (setvar "osmode" 0)
   (setq	p1 (getpoint
-	     "\nEntre com o ponto de inserção do bloco de LED: "
+	     "\nEntre com o ponto de inserï¿½ï¿½o do bloco de LED: "
 	   )
   )
   (if (tblsearch "layer" "LED")
@@ -1883,11 +1926,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       pause
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "1500")
@@ -1908,7 +1951,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de LED (Virado Para Cima): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de LED (Virado Para Cima): "
 	 )
   )
   (if (tblsearch "layer" "LED")
@@ -1923,11 +1966,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       "0"
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "1500")
@@ -1948,7 +1991,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de LED (Virado Para Baixo): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de LED (Virado Para Baixo): "
 	 )
   )
   (if (tblsearch "layer" "LED")
@@ -1963,11 +2006,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       "0"
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "1500")
@@ -1988,7 +2031,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de LED (Virado Para Esquerda): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de LED (Virado Para Esquerda): "
 	 )
   )
   (if (tblsearch "layer" "LED")
@@ -2003,11 +2046,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       "0"
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "1500")
@@ -2030,7 +2073,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de LED (Virado Para Direita): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de LED (Virado Para Direita): "
 	 )
   )
   (if (tblsearch "layer" "LED")
@@ -2045,11 +2088,11 @@
 	   "_s"		       SCALE		   "_non"
 	   p1		       "0"
 	  )
-  (if (tblsearch "layer" "Raio Iluminação")
-    (setvar "clayer" "Raio Iluminação")
+  (if (tblsearch "layer" "Raio Iluminaï¿½ï¿½o")
+    (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Raio Iluminação" "_c" "1" "" "")
-      (setvar "clayer" "Raio Iluminação")
+      (command "-layer" "_M" "Raio Iluminaï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Raio Iluminaï¿½ï¿½o")
     )
   )
   (command "_circle" p1 "1500")
@@ -2070,7 +2113,7 @@
   (guarda_info)
   (setvar "cecolor" "bylayer")
   (setvar "osmode" 0)
-  (setq	p1 (getpoint "\nEntre com o ponto de inserção do Extintor: ")
+  (setq	p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do Extintor: ")
   )
   (if (tblsearch "layer" "Extint")
     (setvar "clayer" "Extint")
@@ -2094,7 +2137,7 @@
   )
   (command "_circle" p1 re)
   (setq	p2 (getpoint
-	     "\nEntre com o ponto de inserção da placa do Extintor: "
+	     "\nEntre com o ponto de inserï¿½ï¿½o da placa do Extintor: "
 	   )
   )
   (if (tblsearch "layer" "E5")
@@ -2123,7 +2166,7 @@
   (guarda_info)
   (setvar "cecolor" "bylayer")
   (setvar "osmode" 0)
-  (setq	p1 (getpoint "\nEntre com o ponto de inserção do Extintor: ")
+  (setq	p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do Extintor: ")
   )
   (if (tblsearch "layer" "Extint")
     (setvar "clayer" "Extint")
@@ -2147,7 +2190,7 @@
   )
   (command "_circle" p1 re)
   (setq	p2 (getpoint
-	     "\nEntre com o ponto de inserção da placa do Extintor: "
+	     "\nEntre com o ponto de inserï¿½ï¿½o da placa do Extintor: "
 	   )
   )
   (if (tblsearch "layer" "E5")
@@ -2171,7 +2214,7 @@
   (guarda_info)
   (setvar "cecolor" "bylayer")
   (setvar "osmode" 0)
-  (setq	p1 (getpoint "\nEntre com o ponto de inserção do Extintor: ")
+  (setq	p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do Extintor: ")
   )
   (if (tblsearch "layer" "Extint")
     (setvar "clayer" "Extint")
@@ -2194,7 +2237,7 @@
   )
   (command "_circle" p1 re)
   (setq	p2 (getpoint
-	     "\nEntre com o ponto de inserção da placa do Extintor: "
+	     "\nEntre com o ponto de inserï¿½ï¿½o da placa do Extintor: "
 	   )
   )
   (if (tblsearch "layer" "E5")
@@ -2250,7 +2293,7 @@
   (guarda_info)
   (setvar "cecolor" "bylayer")
   (setvar "osmode" 512)
-  (setq	p1 (getpoint "\nEntre com o ponto de inserção do Hidrante: ")
+  (setq	p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o do Hidrante: ")
   )
   (initget 1 "Simples Duplo S D")
   (setq tipo (getkword "Simples ou duplo? <S/D>: "))
@@ -2381,7 +2424,7 @@
   (princ)
 )
 
-					;Insert Bloco Detecção
+					;Insert Bloco Detecï¿½ï¿½o
 
 (defun c:detector (/ p1)
   (guarda_info)
@@ -2389,11 +2432,11 @@
   (setvar "osmode" 0)
   (setq	p1 (getpoint "\nEntre com o ponto do bloco do detector: ")
   )
-  (if (tblsearch "layer" "Detecção")
-    (setvar "clayer" "Detecção")
+  (if (tblsearch "layer" "Detecï¿½ï¿½o")
+    (setvar "clayer" "Detecï¿½ï¿½o")
     (progn
-      (command "-layer" "_M" "Detecção" "_c" "1" "" "")
-      (setvar "clayer" "Detecção")
+      (command "-layer" "_M" "Detecï¿½ï¿½o" "_c" "1" "" "")
+      (setvar "clayer" "Detecï¿½ï¿½o")
     )
   )
   (command "-insert"	       "c:/autolisp/blocos/Bloco_detector"
@@ -2403,7 +2446,7 @@
   (devolve_info)
 )
 
-					;Insert Bloco Aéreas
+					;Insert Bloco Aï¿½reas
 
 (defun c:aerea (/ p1)
   (guarda_info)
@@ -2411,11 +2454,11 @@
   (setvar "osmode" 0)
   (setq	p1 (getpoint "\nEntre com o ponto do bloco 'Aerea': ")
   )
-  (if (tblsearch "layer" "Aérea")
-    (setvar "clayer" "Aérea")
+  (if (tblsearch "layer" "Aï¿½rea")
+    (setvar "clayer" "Aï¿½rea")
     (progn
-      (command "-layer" "_M" "Aérea" "_c" "1" "" "")
-      (setvar "clayer" "Aérea")
+      (command "-layer" "_M" "Aï¿½rea" "_c" "1" "" "")
+      (setvar "clayer" "Aï¿½rea")
     )
   )
   (command "-insert"	       "c:/autolisp/blocos/Bloco_Aerea"
@@ -2426,7 +2469,7 @@
   (explodir)
 )
 
-					;Insert Hatch Example Área Fria
+					;Insert Hatch Example ï¿½rea Fria
 
 (defun c:Haex (/ p1)
   (guarda_info)
@@ -2434,11 +2477,11 @@
   (setvar "osmode" 0)
   (setq	p1 (getpoint "\nEntre com o ponto do bloco: ")
   )
-  (if (tblsearch "layer" "Aérea")
-    (setvar "clayer" "Aérea")
+  (if (tblsearch "layer" "Aï¿½rea")
+    (setvar "clayer" "Aï¿½rea")
     (progn
-      (command "-layer" "_M" "Aérea" "_c" "1" "" "")
-      (setvar "clayer" "Aérea")
+      (command "-layer" "_M" "Aï¿½rea" "_c" "1" "" "")
+      (setvar "clayer" "Aï¿½rea")
     )
   )
   (command "-insert"	      "c:/autolisp/blocos/Hatch_Ref"
@@ -2449,7 +2492,7 @@
   (devolve_info)
 )
 
-					;Insert Hatch Example Implantação
+					;Insert Hatch Example Implantaï¿½ï¿½o
 
 (defun c:Haeximp (/ p1)
   (guarda_info)
@@ -2457,11 +2500,11 @@
   (setvar "osmode" 0)
   (setq	p1 (getpoint "\nEntre com o ponto do bloco: ")
   )
-  (if (tblsearch "layer" "Aérea")
-    (setvar "clayer" "Aérea")
+  (if (tblsearch "layer" "Aï¿½rea")
+    (setvar "clayer" "Aï¿½rea")
     (progn
-      (command "-layer" "_M" "Aérea" "_c" "1" "" "")
-      (setvar "clayer" "Aérea")
+      (command "-layer" "_M" "Aï¿½rea" "_c" "1" "" "")
+      (setvar "clayer" "Aï¿½rea")
     )
   )
   (command "-insert"	      "c:/autolisp/blocos/Hatch_Imp"
@@ -2481,7 +2524,7 @@
 (defun c:PO (/ p1 tam_por lado)
   (guarda_info)
   (setvar "cecolor" "bylayer")
-  (setq	p1 (getpoint "\nEntre com o ponto de inserção da porta: ")
+  (setq	p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o da porta: ")
   )
   (initget 1 "60 70 80 90 100 110 120")
   (setq tam_por (getkword "\nEntre com o tamanho da porta"))
@@ -2628,7 +2671,7 @@
 (defun c:seta ()
   (guarda_info)
   (setvar "cecolor" "bylayer")
-  (setq p1 (getpoint "\nEntre com o ponto de inserção: "))
+  (setq p1 (getpoint "\nEntre com o ponto de inserï¿½ï¿½o: "))
   (if (tblsearch "layer" "Parede")
     (setvar "clayer" "Parede")
     (progn
@@ -2643,7 +2686,7 @@
   (explodir)
 
   (initget 1 "S D")
-  (setq orient (getkword "\nEntre com a orientação: <S/D>"))
+  (setq orient (getkword "\nEntre com a orientaï¿½ï¿½o: <S/D>"))
   (if (= orient "S")
     (command "-insert"	       "c:/autolisp/blocos/Letra_S"
 	     "_s"	       "1"		 "_non"
@@ -2667,7 +2710,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção da legenda da escada: "
+	   "\nEntre com o ponto de inserï¿½ï¿½o da legenda da escada: "
 	 )
   )
   (if (tblsearch "layer" "Legenda")
@@ -2694,7 +2737,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de acesso: "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de acesso: "
 	 )
   )
   (if (tblsearch "layer" "Bloco_acesso")
@@ -2721,7 +2764,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de hidrante: "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de hidrante: "
 	 )
   )
   (if (tblsearch "layer" "Bloco_H")
@@ -2747,7 +2790,7 @@
   (setvar "cecolor" "bylayer")
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de escada (Planta de Risco): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de escada (Planta de Risco): "
 	 )
   )
   (if (tblsearch "layer" "Bloco_escada")
@@ -2772,7 +2815,7 @@
   (setvar "osmode" 0)
   (setq	p1
 	 (getpoint
-	   "\nEntre com o ponto de inserção do bloco de Reserva de Incêndio (Planta de Risco): "
+	   "\nEntre com o ponto de inserï¿½ï¿½o do bloco de Reserva de Incï¿½ndio (Planta de Risco): "
 	 )
   )
   (if (tblsearch "layer" "Bloco_Reserva")
@@ -3242,10 +3285,5 @@
 (princ "loaded.")
 (princ)
 
-
-
-					;Made by Zattoni!
-                                        ;iMPOSTO É ROUBO
-
-(prompt "\nComandos Carregados com Sucesso! - Made by Victor Zattoni")
+(prompt "\nComandos Carregados com Sucesso! - Victor Zattoni")
 (princ)
